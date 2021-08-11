@@ -41,7 +41,7 @@
                 My Club
                 <div class="ripple-container"></div>
             </button>
-            @if ($dataScore != 0)
+            @if ($dataScore['status'] == 1)
                 <button type="button" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#mocktestscore">
                     Mocktest Score
                     <div class="ripple-container"></div>
@@ -112,7 +112,7 @@
                                 Listening
                             </h4>
                         </th>
-                        <td>{{ $mocktestData->listening_score }}</td>
+                        <td>{{ $dataScore['listening_score'] }}</td>
                     </tr>
                     <tr>
                         <th>
@@ -120,35 +120,35 @@
                                 Reading
                             </h4>
                         </th>
-                        <td>{{ $mocktestData->reading_score }}</td>
+                        <td>{{ $dataScore['reading_score'] }}</td>
                     </tr>
 
                     <tr>
                         <th>
-                            <h4 class="pl-2">
-                                Writing 1
+                            <h4 class="pl-1">
+                                Writing task1
                             </h4>
                         </th>
-                        <td><p class="pr-2">{{ $mocktestData->writing_score_1 }}</p></td>
+                        <td><p class="pr-2">{{ $dataScore['writing_score_1'] }}</p></td>
                     </tr>
 
-                    @if ($mocktestData->writing_score_2 == 0)
+                    @if ($dataScore['writing_score_2'] == 0)
                         <tr>
                             <th>
-                                <h4 class="pl-2">
-                                    Writing 2
+                                <h4 class="pl-1">
+                                    Writing task2
                                 </h4>
                             </th>
-                            <td><p class="pr-2">{{ $mocktestData->writing_score_3 }}</p></td>
+                            <td><p class="pr-2">{{ $dataScore->writing_score_3 }}</p></td>
                         </tr>
-                    @else
+                    @elseif ($dataScore['writing_score_3'] == 0)
                         <tr>
                             <th>
-                                <h4 class="pl-2">
-                                    Writing Score 2
+                                <h4 class="pl-1">
+                                    Writing task2
                                 </h4>
                             </th>
-                            <td><p class="pr-2">{{ $mocktestData->writing_score_2 }}</p></td>
+                            <td><p class="pr-2">{{ $dataScore['writing_score_2'] }}</p></td>
                         </tr>                  
                     @endif
 
@@ -158,7 +158,7 @@
                                 Overall writing score
                             </h4>
                         </th>
-                        <td><p>{{ $mocktestData->overall_writing_score }}</p></td>
+                        <td><p>{{ $dataScore['overall_writing_score'] }}</p></td>
                     </tr>  
                     
                     <tr>
@@ -167,25 +167,25 @@
                                 Speaking
                             </h4>
                         </th>
-                        <td><p>{{ $mocktestData->speaking_score }}</p></td>
+                        <td><p>{{ $dataScore['speaking_score'] }}</p></td>
                     </tr>  
 
                     <tr>
                         <th>
-                            <h2 class="font-weight-bold">
-                                Overall Band
+                            <h2>
+                               <b>Overall Band</b>
                             </h2>
                         </th>
-                        <td><h2 class="font-weight-bold">{{ $mocktestData->overall_band }}</h2></td>
+                        <td><h2><b>{{ $dataScore['overall_band'] }}</b></h2></td>
                     </tr>  
 
                     <tr>
                         <th>
-                            <h2 class="font-weight-bold">
-                                Course Recommendation
+                            <h2>
+                                <b>Course Recommendation</b> 
                             </h2>
                         </th>
-                        <td><h2 class="font-weight-bold">{{ $mocktestData->note }}</h2></td>
+                        <td><h2><b>{{ $dataScore['note'] }}</b></h2></td>
                     </tr>  
 
                 </table>

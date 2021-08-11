@@ -38,6 +38,12 @@ class ProfileController extends Controller
         ->where('std_id','=', auth('student')->user()->std_id)
         ->first();
 
-        return view('profile', compact('profile', 'myclubs', 'mocktestData'));
+        if(empty($mocktestData)){
+            $dataScore = 0;
+        }else{
+            $dataScore = 1;
+        }
+
+        return view('profile', compact('profile', 'myclubs', 'mocktestData', 'dataScore'));
     }
 }

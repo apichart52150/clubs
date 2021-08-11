@@ -54,6 +54,18 @@ return [
             'engine' => null,
         ],
 
+        'mysql2' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'database' => 'newcambr_crm',
+            'username' => 'newcambr_crm',
+            'password' =>'08Newc@mb12',
+            'charset' => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'prefix' => '',
+            'strict' => false,
+        ], 
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),

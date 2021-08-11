@@ -131,7 +131,7 @@
                             <td><p>{{ $dataScore['writing_score_1'] }}</p></td>
                         </tr>
 
-                        @if ($dataScore['writing_score_2'] == 0)
+                        @if ($dataScore['writing_score_2'] == '0')
                             <tr>
                                 <th>
                                     <h4 class="pl-1">

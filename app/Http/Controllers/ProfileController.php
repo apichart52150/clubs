@@ -31,7 +31,13 @@ class ProfileController extends Controller
             );
         });
 
+        // dd($profile->nccode);
 
-        return view('profile', compact('profile', 'myclubs'));
+        $mocktestData = DB::table('mocktest_allscore')
+        ->select('*')
+        ->where('std_id','=', auth('student')->user()->std_id)
+        ->first();
+
+        return view('profile', compact('profile', 'myclubs', 'mocktestData'));
     }
 }

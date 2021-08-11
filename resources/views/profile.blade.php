@@ -28,7 +28,7 @@
                     <td>{{ date('d/M/Y', strtotime($profile->class_expire)) }}</td>
                 </tr>
     
-                @component('components.info', ['profile' => $profile])    
+                @component('components.info', ['profile' => $profile, 'mocktestData' => $mocktestData])    
                 @endcomponent
             </table>
 

@@ -126,4 +126,89 @@
     </tr>
     @endif
 
+    <!-- add score mocktest -->
+    
+    <tr class="info">
+        <th colspan="2">
+            <h4>
+                <i class="fas fa-book color-dark"></i> Mocktest Scores
+            </h4>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            Listening
+        </td>
+        <td>
+            <span class="badge badge-success">{{ $mocktestData->listening_score }}</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Reading
+        </td>
+        <td>
+            <span class="badge badge-success">{{ $mocktestData->reading_score }}</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            writing1
+        </td>
+        <td>
+            <span class="badge badge-success">{{ $mocktestData->writing_score_1 }}</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            writing2
+        </td>
+        <td>
+            @if ($mocktestData->writing_score_2 == 0)
+                <span class="badge badge-success">{{ $mocktestData->writing_score_3 }}</span>
+            @else
+                <span class="badge badge-success">{{ $mocktestData->writing_score_2 }}</span>
+            @endif
+            
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Overall writing score
+        </td>
+        <td>
+            <span class="badge badge-success">{{ $mocktestData->overall_writing_score }}</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Speaking
+        </td>
+        <td>
+            <span class="badge badge-success">{{ $mocktestData->speaking_score }}</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+        Course Recommendation / Note
+        </td>
+        <td>
+            <span class="badge badge-success">{{ $mocktestData->note }}</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Expected Band
+        </td>
+        <td>
+            <span class="badge badge-success">{{ $mocktestData->expected_band }}</span>
+        </td>
+    </tr>
+
 @endif

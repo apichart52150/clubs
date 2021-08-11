@@ -36,6 +36,8 @@ class Profile extends Model
                 ->where('student.std_id', $std_id)
                 ->get()[0];
             }
+
+       
             
         return $profile;
 

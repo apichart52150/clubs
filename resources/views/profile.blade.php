@@ -41,12 +41,11 @@
                 My Club
                 <div class="ripple-container"></div>
             </button>
-            @if ($dataScore['status'] == 1)
-                <button type="button" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#mocktestscore">
-                    Mocktest Score
-                    <div class="ripple-container"></div>
-                </button>
-            @endif
+           
+            <button type="button" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#mocktestscore">
+                Mocktest Score
+                <div class="ripple-container"></div>
+            </button>
            
             <a href="{{ url('logout') }}" class="btn btn-danger btn-raised">
                 Log Out
@@ -103,94 +102,84 @@
                 </button>
                 <h3 class="modal-title">Mocktest Score</h3>
             </div>
-            <div class="modal-body text-center">
-            <div class="card-block text-center">
-                <table class="table table-border table-sm table-profile">
-                    <tr>
-                        <th>
-                            <h4>
-                                Listening
-                            </h4>
-                        </th>
-                        <td>{{ $dataScore['listening_score'] }}</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <h4>
-                                Reading
-                            </h4>
-                        </th>
-                        <td>{{ $dataScore['reading_score'] }}</td>
-                    </tr>
-
-                    <tr>
-                        <th>
-                            <h4 class="pl-1">
-                                Writing task1
-                            </h4>
-                        </th>
-                        <td><p class="pr-2">{{ $dataScore['writing_score_1'] }}</p></td>
-                    </tr>
-
-                    @if ($dataScore['writing_score_2'] == 0)
+            <div class="modal-body">
+                <div class="card-block">
+                    <table class="table table-border table-sm table-profile">
                         <tr>
                             <th>
-                                <h4 class="pl-1">
-                                    Writing task2
+                                <h4>
+                                    Listening
                                 </h4>
                             </th>
-                            <td><p class="pr-2">{{ $dataScore->writing_score_3 }}</p></td>
+                            <td><p style="margin-left: 25px;">{{ $dataScore['listening_score'] }}</p></td>
                         </tr>
-                    @elseif ($dataScore['writing_score_3'] == 0)
+                        <tr>
+                            <th>
+                                <h4>
+                                    Reading
+                                </h4>
+                            </th>
+                            <td><p style="margin-left: 25px;">{{ $dataScore['reading_score'] }}</td>
+                        </tr>
+
                         <tr>
                             <th>
                                 <h4 class="pl-1">
-                                    Writing task2
+                                    Writing task1
                                 </h4>
                             </th>
-                            <td><p class="pr-2">{{ $dataScore['writing_score_2'] }}</p></td>
-                        </tr>                  
-                    @endif
+                            <td><p>{{ $dataScore['writing_score_1'] }}</p></td>
+                        </tr>
 
-                    <tr>
-                        <th>
-                            <h4>
-                                Overall writing score
-                            </h4>
-                        </th>
-                        <td><p>{{ $dataScore['overall_writing_score'] }}</p></td>
-                    </tr>  
-                    
-                    <tr>
-                        <th>
-                            <h4>
-                                Speaking
-                            </h4>
-                        </th>
-                        <td><p>{{ $dataScore['speaking_score'] }}</p></td>
-                    </tr>  
+                        @if ($dataScore['writing_score_2'] == 0)
+                            <tr>
+                                <th>
+                                    <h4 class="pl-1">
+                                        Writing task2
+                                    </h4>
+                                </th>
+                                <td><p>{{ $dataScore->writing_score_3 }}</p></td>
+                            </tr>
+                        @elseif ($dataScore['writing_score_3'] == 0)
+                            <tr>
+                                <th>
+                                    <h4 class="pl-1">
+                                        Writing task2
+                                    </h4>
+                                </th>
+                                <td><p>{{ $dataScore['writing_score_2'] }}</p></td>
+                            </tr>                  
+                        @endif
 
-                    <tr>
-                        <th>
-                            <h2>
-                               <b>Overall Band</b>
-                            </h2>
-                        </th>
-                        <td><h2><b>{{ $dataScore['overall_band'] }}</b></h2></td>
-                    </tr>  
+                        <tr>
+                            <th>
+                                <h4>
+                                    Overall writing score
+                                </h4>
+                            </th>
+                            <td><p style="margin-left: 25px;">{{ $dataScore['overall_writing_score'] }}</p></td>
+                        </tr>  
+                        
+                        <tr>
+                            <th>
+                                <h4>
+                                    Speaking
+                                </h4>
+                            </th>
+                            <td><p style="margin-left: 25px;">{{ $dataScore['speaking_score'] }}</p></td>
+                        </tr>  
 
-                    <tr>
-                        <th>
-                            <h2>
-                                <b>Course Recommendation</b> 
-                            </h2>
-                        </th>
-                        <td><h2><b>{{ $dataScore['note'] }}</b></h2></td>
-                    </tr>  
+                        <tr>
+                            <th>
+                                <h2>
+                                <b>Overall Band</b>
+                                </h2>
+                            </th>
+                            <td><h2 style="margin-left: 25px;"><b>{{ $dataScore['overall_band'] }}</b></h2></td>
+                        </tr>  
 
-                </table>
-            </div>
-                
+                    </table>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

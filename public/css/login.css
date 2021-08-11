@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  filter: brightness(0) invert(1);
+}
+
+#modal-con {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.3s ease-in-out;
+}
+
+#modal.show #modal-con {
+  opacity: 1;
+  transform: translateY(200px);
+}

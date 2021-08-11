@@ -1,0 +1,71 @@
+/* Main */
+.content-wrapper {
+  min-height: calc(100vh - 276px) !important;
+}
+
+/* Condition */
+.card-content {
+  padding: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+/* Menu */
+.no-session {
+  margin-bottom: 15px;
+}
+
+/* Profile */
+.ms-hero-img-city {
+  background: url("../assets/img/skyline2.jpg") center center/cover !important;
+}
+
+.table-profile h4 {
+  margin: 0;
+}
+
+.table-profile .info th {
+  text-align: center;
+}
+
+.table-profile .badge {
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+/* FAQs */
+.faq-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.faq .panel-group {
+  margin-bottom: 5px;
+  height: auto !important;
+}
+
+.faq .panel-group .panel {
+  margin-bottom: 10px;
+}
+
+.faq .panel-title a {
+  display: inline-block;
+  width: 100%;
+}
+
+.faq .panel-title a:hover,
+.faq .panel-title a:active,
+.faq .panel-title a:focus {
+  color: #fff;
+  opacity: 0.8;
+}
+
+@media(max-width: 767px) {
+  .content-wrapper {
+    min-height: calc(100vh - 184px) !important;
+  }
+}

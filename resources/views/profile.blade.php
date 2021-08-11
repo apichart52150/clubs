@@ -138,7 +138,7 @@
                                         Writing task2
                                     </h4>
                                 </th>
-                                <td><p>{{ $dataScore->writing_score_3 }}</p></td>
+                                <td><p>{{ $dataScore['writing_score_3'] }}</p></td>
                             </tr>
                         @else
                             <tr>

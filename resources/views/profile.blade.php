@@ -140,7 +140,7 @@
                                 </th>
                                 <td><p>{{ $dataScore->writing_score_3 }}</p></td>
                             </tr>
-                        @elseif ($dataScore['writing_score_3'] == 0)
+                        @else
                             <tr>
                                 <th>
                                     <h4 class="pl-1">

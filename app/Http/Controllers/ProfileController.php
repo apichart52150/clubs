@@ -41,15 +41,15 @@ class ProfileController extends Controller
         if(empty($mocktestData)){
             $dataScore = array(
                 'status' => 0,
-                'listening_score' => "none",
-                'reading_score' => "none",
-                'writing_score_1' => 3,
-                'writing_score_2' => 3,
-                'writing_score_3' => 3,
-                'overall_writing_score' => "none",
-                'speaking_score' => "none",
-                'overall_band' => "none",
-                'note' => "none"
+                'listening_score' => "0",
+                'reading_score' => "0",
+                'writing_score_1' => "0",
+                'writing_score_2' => "0",
+                'writing_score_3' => "0",
+                'overall_writing_score' => "0",
+                'speaking_score' => "0",
+                'overall_band' => "0",
+                'note' => "0"
             );
         }else{
             $dataScore = array(
